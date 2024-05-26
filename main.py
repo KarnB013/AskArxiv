@@ -35,6 +35,7 @@ if ip:
     embeddings = OpenAIEmbeddings()
     vectorDB = FAISS.from_documents(chunks, embeddings)
 
+    # getting 5 most similar chunks and using them to find the answer to the user query
     retriever = vectorDB.as_retriever(search_type='similarity', search_kwargs={'k': 5})
     chain = RetrievalQA.from_chain_type(
         llm=llm, chain_type='stuff', retriever=retriever, return_source_documents=True
