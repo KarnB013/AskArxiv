@@ -7,7 +7,9 @@ By providing it the identifier(Ex: 2401.00049) of any research paper from arxiv.
 
 Step 1: run "pip install -r requirements.txt" to install all dependencies
 
-Step 2: use "streamlit run main.py" to run
+Step 2: create a .env file with "OPENAI_API_KEY = '_your_key_'"
+
+Step 3: use "streamlit run main.py" to run
 
 **Demo**
 
